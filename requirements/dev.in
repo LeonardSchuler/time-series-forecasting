@@ -1,0 +1,8 @@
+-r main.in
+pip-tools
+pytest
+pytest-pudb
+mypy
+pandas-stubs
+boto3-stubs[sts]
+sphinx

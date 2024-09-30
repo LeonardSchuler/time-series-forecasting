@@ -1,0 +1,12 @@
+boto3
+torch
+torchvision
+torchaudio
+pandas
+jupyterlab
+scikit-learn
+matplotlib
+seaborn
+pyro-ppl
+mlflow
+requests
