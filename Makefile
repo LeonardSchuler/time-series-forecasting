@@ -4,12 +4,12 @@ all: requirements/main.txt requirements/dev.txt docs
 
 # Check if MLFLOW_TRACKING_SERVER is already set in the environment
 ifneq ($(origin MLFLOW_TRACKING_SERVER_DOMAIN), environment)
-    MLFLOW_TRACKING_SERVER := localhost
+    MLFLOW_TRACKING_SERVER_DOMAIN := localhost
 endif
 
 # Check if MLFLOW_TRACKING_SERVER_PORT is already set in the environment
 ifneq ($(origin MLFLOW_TRACKING_SERVER_PORT), environment)
-    MLFLOW_TRACKING_SERVER_PORT := 8080
+    MLFLOW_TRACKING_SERVER_PORT := 5000
 endif
 
 clean:
@@ -25,6 +25,9 @@ clean:
 lint:
 	@echo "Running linter..."
 	mypy src/
+
+tracking:
+	mlflow server --host ${MLFLOW_TRACKING_SERVER_DOMAIN} --port ${MLFLOW_TRACKING_SERVER_PORT}
 
 requirements/main.txt: requirements/main.in
 	@echo "Generating requirements/main.txt from requirements/main.in..."

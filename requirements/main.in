@@ -10,3 +10,4 @@ seaborn
 pyro-ppl
 mlflow
 requests
+statsmodels

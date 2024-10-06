@@ -274,11 +274,13 @@ numpy==2.1.1
     #   mlflow
     #   pandas
     #   pandas-stubs
+    #   patsy
     #   pyarrow
     #   pyro-ppl
     #   scikit-learn
     #   scipy
     #   seaborn
+    #   statsmodels
     #   torchvision
 opentelemetry-api==1.27.0
     # via
@@ -307,17 +309,21 @@ packaging==24.1
     #   pudb
     #   pytest
     #   sphinx
+    #   statsmodels
 pandas==2.2.3
     # via
     #   -r main.in
     #   mlflow
     #   seaborn
+    #   statsmodels
 pandas-stubs==2.2.2.240909
     # via -r dev.in
 pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.4
     # via jedi
+patsy==0.5.6
+    # via statsmodels
 pexpect==4.9.0
     # via ipython
 pillow==10.4.0
@@ -435,6 +441,7 @@ scipy==1.14.1
     # via
     #   mlflow
     #   scikit-learn
+    #   statsmodels
 seaborn==0.13.2
     # via -r main.in
 send2trash==1.8.3
@@ -443,6 +450,7 @@ six==1.16.0
     # via
     #   asttokens
     #   bleach
+    #   patsy
     #   python-dateutil
     #   rfc3339-validator
 smmap==5.0.1
@@ -477,6 +485,8 @@ sqlparse==0.5.1
     # via mlflow-skinny
 stack-data==0.6.3
     # via ipython
+statsmodels==0.14.3
+    # via -r main.in
 sympy==1.13.3
     # via torch
 terminado==0.18.1
