@@ -1,5 +1,9 @@
+import logging
+
 import numpy as np
 import pandas as pd
+
+logger = logging.getLogger(__name__)
 
 
 def make_electricity_data(
@@ -20,6 +24,7 @@ def make_electricity_data(
     """
     # Set seed for reproducibility
     if random_state is not None:
+        logger.info(f"Setting numpy seed to: {random_state}")
         np.random.seed(random_state)
 
     # Generate time index
@@ -75,5 +80,14 @@ def make_electricity_data(
 
     # Set timestamp as index
     data.set_index("time", inplace=True)
+    # Ensure index is datetime
+
+    if data.index.dtype == "object":
+        data.index = pd.to_datetime(data.index)
+
+    logger.info(
+        f"Shape: {data.shape} | Start: {data.index.min()} | End: {data.index.max()}"
+    )
+    logger.info(f"Columns: {data.columns.tolist()}")
 
     return data
