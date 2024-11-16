@@ -267,8 +267,9 @@ networkx==3.3
     # via torch
 notebook-shim==0.2.4
     # via jupyterlab
-numpy==2.1.1
+numpy==1.26.4
     # via
+    #   -r main.in
     #   contourpy
     #   matplotlib
     #   mlflow

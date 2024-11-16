@@ -5,6 +5,7 @@ torchaudio
 pandas
 jupyterlab
 scikit-learn
+numpy<2
 matplotlib
 seaborn
 pyro-ppl
