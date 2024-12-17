@@ -12,3 +12,4 @@ pyro-ppl
 mlflow
 requests
 statsmodels
+catboost

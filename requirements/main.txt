@@ -46,6 +46,8 @@ cachetools==5.5.0
     # via
     #   google-auth
     #   mlflow-skinny
+catboost==1.2.7
+    # via -r main.in
 certifi==2024.8.30
     # via
     #   httpcore
@@ -109,6 +111,8 @@ graphql-core==3.2.4
     #   graphql-relay
 graphql-relay==3.2.0
     # via graphene
+graphviz==0.20.3
+    # via catboost
 greenlet==3.1.1
     # via sqlalchemy
 gunicorn==23.0.0
@@ -212,6 +216,7 @@ markupsafe==2.1.5
 matplotlib==3.9.2
     # via
     #   -r main.in
+    #   catboost
     #   mlflow
     #   seaborn
 matplotlib-inline==0.1.7
@@ -244,6 +249,7 @@ notebook-shim==0.2.4
 numpy==1.26.4
     # via
     #   -r main.in
+    #   catboost
     #   contourpy
     #   matplotlib
     #   mlflow
@@ -279,10 +285,12 @@ packaging==24.1
     #   matplotlib
     #   mlflow-skinny
     #   nbconvert
+    #   plotly
     #   statsmodels
 pandas==2.2.3
     # via
     #   -r main.in
+    #   catboost
     #   mlflow
     #   seaborn
     #   statsmodels
@@ -300,6 +308,8 @@ pillow==10.4.0
     #   torchvision
 platformdirs==4.3.6
     # via jupyter-core
+plotly==5.24.1
+    # via catboost
 prometheus-client==0.21.0
     # via jupyter-server
 prompt-toolkit==3.0.48
@@ -388,6 +398,7 @@ scikit-learn==1.5.2
     #   mlflow
 scipy==1.14.1
     # via
+    #   catboost
     #   mlflow
     #   scikit-learn
     #   statsmodels
@@ -399,6 +410,7 @@ six==1.16.0
     # via
     #   asttokens
     #   bleach
+    #   catboost
     #   patsy
     #   python-dateutil
     #   rfc3339-validator
@@ -422,6 +434,8 @@ statsmodels==0.14.3
     # via -r main.in
 sympy==1.13.3
     # via torch
+tenacity==9.0.0
+    # via plotly
 terminado==0.18.1
     # via
     #   jupyter-server

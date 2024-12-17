@@ -41,7 +41,7 @@ requirements/dev.txt: requirements/dev.in requirements/main.in
 
 venvdev:
 	python3 -m venv .venv
-	source .venv/bin/activate && pip install --upgrade pip && pip install -r requirements/dev.txt
+	source .venv/bin/activate && pip install --upgrade pip && pip install -r requirements/dev.txt && pip install -e .
 
 docs:
 	@echo "Generating documentation as html..."
