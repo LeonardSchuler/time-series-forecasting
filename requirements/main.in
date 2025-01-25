@@ -13,3 +13,5 @@ mlflow
 requests
 statsmodels
 catboost
+ngboost
+imageio
